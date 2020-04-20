@@ -1,0 +1,97 @@
+/* Based on https://github.com/dempfi/ayu */
+
+* {
+  font-size: 14pt !important;
+}
+
+body {
+  overflow: hidden;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+#window {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  background-color: #1f2430;
+  resize: both;
+  overflow: auto;
+  -ms-overflow-style: none;
+
+}
+
+#window::-webkit-scrollbar {
+  display: none;
+}
+
+#windowheader {
+  padding: 25px;
+  cursor: move;
+  z-index: 10;
+  background-color: white;
+  color: #fff;
+}
+
+.windowTitle { text-align: center; font-family: Arial, Helvetica, sans-serif; color: black; position: absolute; right: 0; left: 0; top: 15px;}
+
+#exit {
+  position: absolute;
+  right: 0px;
+  height: 50px;
+  border: none; overflow: auto; outline: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;
+}
+
+#output { color:white; resize: none; width: -webkit-fill-available; height: 100px; margin: 10px;  background: #212837; border-color: black; border: none; overflow: auto; outline: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;}
+
+h1, h2, h3, h4, h5, h6, label, button { text-align: center; font-family: Arial, Helvetica, sans-serif; color: white; }
+h1 { font-size: 24pt !important; }
+h4 { font-size: 14pt !important; }
+
+button { transition-duration: 0.4s; background: #191e2a; border-color: black; border: none; overflow: auto; outline: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; }
+
+button:hover {  background-color: grey; /* Green */ color: white; cursor: pointer; }
+
+.cm-s-dark.CodeMirror { background: #212837; color: #cbccc6; }
+.cm-s-dark div.CodeMirror-selected { background: #34455a; }
+.cm-s-dark .CodeMirror-line::selection, .cm-s-dark .CodeMirror-line > span::selection, .cm-s-dark .CodeMirror-line > span > span::selection { background: #34455a; }
+.cm-s-dark .CodeMirror-line::-moz-selection, .cm-s-dark .CodeMirror-line > span::-moz-selection, .cm-s-dark .CodeMirror-line > span > span::-moz-selection { background: rgba(25, 30, 42, 99); }
+.cm-s-dark .CodeMirror-gutters { background: #1f2430; border-right: 0px; }
+.cm-s-dark .CodeMirror-guttermarker { color: white; }
+.cm-s-dark .CodeMirror-guttermarker-subtle { color:  rgba(112, 122, 140, 66); }
+.cm-s-dark .CodeMirror-linenumber { color: rgba(61, 66, 77, 99); }
+.cm-s-dark .CodeMirror-cursor { border-left: 1px solid white !important; }
+
+.cm-s-dark span.cm-comment { color: #5c6773; font-style:italic; }
+.cm-s-dark span.cm-atom { color: #ae81ff; }
+.cm-s-dark span.cm-number { color: #ffcc66; }
+
+.cm-s-dark span.cm-comment.cm-attribute { color: #ffd580; }
+.cm-s-dark span.cm-comment.cm-def { color: #d4bfff; }
+.cm-s-dark span.cm-comment.cm-tag { color: #5ccfe6; }
+.cm-s-dark span.cm-comment.cm-type { color: #5998a6; }
+
+.cm-s-dark span.cm-property { color: #f29e74; }
+.cm-s-dark span.cm-attribute { color: #ffd580; }  
+.cm-s-dark span.cm-keyword { color: #ffa759; } 
+.cm-s-dark span.cm-builtin { color: #ffcc66; }
+.cm-s-dark span.cm-string { color: #bae67e; }
+
+.cm-s-dark span.cm-variable { color: #cbccc6; }
+.cm-s-dark span.cm-variable-2 { color: #f28779; }
+.cm-s-dark span.cm-variable-3 { color: #5ccfe6; }
+.cm-s-dark span.cm-type { color: #ffa759; }
+.cm-s-dark span.cm-def { color: #ffd580; }
+.cm-s-dark span.cm-bracket { color: rgba(92, 207, 230, 80); }
+.cm-s-dark span.cm-tag { color: #5ccfe6; }
+.cm-s-dark span.cm-header { color: #bae67e; }
+.cm-s-dark span.cm-link { color: #5ccfe6; }
+.cm-s-dark span.cm-error { color: #ff3333; } 
+
+.cm-s-dark .CodeMirror-activeline-background { background: #191e2a; }
+.cm-s-dark .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}
